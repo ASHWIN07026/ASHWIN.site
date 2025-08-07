@@ -200,24 +200,47 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-      nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      img.profile-pic {
-        width: 180px;
-        height: 180px;
-      }
-    }
-    @media (max-width: 480px) {
+    /* Additional Mobile Fixes */
+@media only screen and (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  img.profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mode-toggle {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
       header {
         padding: 10px;
       }
@@ -295,3 +318,4 @@
 
 </body>
 </html>
+
