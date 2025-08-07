@@ -302,7 +302,18 @@ html_code = """<!DOCTYPE html>
     }
   });
 </script>
-
+<script>
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+  if (isMobileDevice()) {
+    document.body.classList.add('mobile-view');
+    console.log("Mobile device detected");
+  } else {
+    document.body.classList.add('desktop-view');
+    console.log("Desktop/Laptop device detected");
+  }
+</script>
 </body>
 </html>"""
 
@@ -312,3 +323,4 @@ with open(output_file, "w", encoding="utf-8") as f:
     f.write(html_code)
 
 output_file
+
