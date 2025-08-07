@@ -1,6 +1,6 @@
-# Creating the full responsive HTML with mobile fixes included.
 from pathlib import Path
 
+# Full HTML code for a responsive and mobile-optimized portfolio page
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +37,7 @@ html_code = """
       list-style: none;
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
     nav ul li a {
       color: #fff;
@@ -133,7 +134,8 @@ html_code = """
 </html>
 """
 
-# Save the updated HTML file
+# Save the HTML to a file
 output_path = "/mnt/data/index_final_responsive.html"
 Path(output_path).write_text(html_code)
+
 output_path
